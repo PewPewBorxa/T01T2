@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.4.1-node-browsers
+ 
+    steps:
+      - checkout
+
+      - run:
+         name: echo1
+         command: echo hola
+
+      - run:
+         name: echo2
+         command: echo que tal?
+
+      - run:
+         print: Print la fecha actual
+         command: date
